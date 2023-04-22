@@ -211,5 +211,43 @@ function compare2(a, b) {
 console.log(numbers2.sort(compare2))
 
 
+/////////////////////////////////////////////////////////////////////////
+
+// reverse - изменяет массив, меняя в нем порядок элементов на обратный
+// также возвращает масссив измененных элементов
+
+const arr5 = [1, 2, 3, 4, 5]
+
+const resultArr5 = arr5.reverse()
+
+console.log(arr5) // [5, 4, 3, 2, 1]
+
+console.log(resultArr5 === arr5) // true
 
 
+/////////////////////////////////////////////////////////////////////////
+
+// split - разбивает строку на массив элементов
+
+const myMessage = "Hello world and the weather is beautiful"
+
+// Разделить строку на массив элементов по пробелу
+console.log(myMessage.split(' ')) // [ 'Hello', 'world', 'and', 'the', 'weather', 'is', 'beautiful' ]
+
+// Мы также можем указать ограничение на размер выходящего рассива
+console.log(myMessage.split(' ', 3)) // [ 'Hello', 'world', 'and']
+
+const myMessage2 = "Hello, how, dkeokdoe"
+
+console.log(myMessage2.split(', ')) // [ 'Hello', 'how', 'dkeokdoe' ]
+
+// Вызов split с пустой строкой разделит строку на буквы
+
+const myMessage3 = "Hello world"
+console.log(myMessage3.split(''))
+
+// join - объединяет массив в строку
+
+console.log("Hello world hahaha".split(' ').join('; ')) // Hello; world; hahaha
+
+console.log("Hleodkeodkeokdo".split('').join(''))
