@@ -45,3 +45,16 @@ console.log(arr2.slice(-1))
 
 console.log(arr2.slice())
 
+/////////////////////////////////////////////////////////////////////////
+
+const arr3 = [1, 2, 3, 4, 5]
+
+console.log(arr3.concat([1, 2, 3], 5, 6)) // [1, 2, 3, 4, 5, 1, 2, 3, 5, 6]
+console.log(arr3) // [1, 2, 3, 4, 5]
+
+const user = {
+    name: "Ivan",
+    surname: "Ivanov"
+}
+
+console.log(arr3.concat(user, [1, 2, 3], {name: "Petia"})) // объекты также добавляются в массив
