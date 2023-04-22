@@ -58,3 +58,17 @@ const user = {
 }
 
 console.log(arr3.concat(user, [1, 2, 3], {name: "Petia"})) // объекты также добавляются в массив
+
+/////////////////////////////////////////////////////////////////////////
+
+// forEach позволяет интерировать объект, при этом она ничего не должна возвращать, если мы внутри ее тела попытаемся что-то вернуть, то это отбросится и будет проигнорировано
+
+const names2 = ["Petia", "Mary", "Alex", "James"]
+
+const result2 = names2.forEach((name, index, array) => {
+    // Здесь мы можем что-то делать с элементами массива
+    console.log(`element ${name} at index ${index} inside [${array}]`)
+    return 5; // it will be ignore
+})
+
+console.log(result2) // undefined
