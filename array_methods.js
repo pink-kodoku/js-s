@@ -151,3 +151,26 @@ const filteredUsers = users2.filter((user, index, array) => {
 })
 
 console.log(filteredUsers)
+
+
+/////////////////////////////////////////////////////////////////////////
+
+// Для того чтобы преобразовать массив, мы можем использовать определенные методы
+// map - вызывает функцию для каждого элемента, которая можем преобразовывать данный элемент
+
+// добавим каждому пользователю id
+
+let id = 0;
+const userResults = users2.map((user, index, array) => {
+    // Возвращаем новое значение, вместо элемента
+    user.id = id++;
+    return user;
+})
+
+// преобразуем name у каждого объекта в его длину и вернем массив длин
+
+const lengths = users2.map(u => u.name.length)
+
+console.log(userResults)
+
+console.log(lengths)
