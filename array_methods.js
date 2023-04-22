@@ -72,3 +72,23 @@ const result2 = names2.forEach((name, index, array) => {
 })
 
 console.log(result2) // undefined
+
+/////////////////////////////////////////////////////////////////////////
+
+const arr4 = [1, 2, 3, 4, 5]
+
+// indexOf(item, from) возвращает индекс, на котором был найден определенный элемент, в противном случае возвращает -1
+console.log(arr4.indexOf(4)) // 3
+console.log(arr4.indexOf(100)) // -1
+console.log(arr4.indexOf(3, 2)) // 2
+
+// includes(item, from) возращает true если нашел элемент в массиве, в противном случае возвращает false
+console.log(arr4.includes(4)) // true
+console.log(arr4.includes(100)) // false
+console.log(arr4.includes(3, 2)) // true
+
+// По умолчанию оба эти методы используют строгое сравнение (===)
+
+// lastIndexOf делает тоже саоме что и indexOf, но справа налево
+
+console.log(arr4.lastIndexOf(1)) // 0
