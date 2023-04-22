@@ -128,3 +128,26 @@ console.log(userIndex) // 0
 const userIndex2 = users.findLastIndex(u => u.name === "David")
 
 console.log(userIndex2) // 2
+
+
+/////////////////////////////////////////////////////////////////////////
+
+// В случае, если найденных элементов может быть много, мы используем arr.filter()
+
+const users2 = [
+    {name: "Petia", age: 5},
+    {name: "Ivan", age: 15},
+    {name: "David", age: 15},
+    {name: "Jon", age: 15},
+    {name: "Bob", age: 11},
+]
+
+// В случае, если ничего не будет найдено, вернется пустой массив
+const filteredUsers = users2.filter((user, index, array) => {
+    if (user.age === 15) {
+        return true;
+    }
+    return false;
+})
+
+console.log(filteredUsers)
