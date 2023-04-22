@@ -92,3 +92,39 @@ console.log(arr4.includes(3, 2)) // true
 // lastIndexOf делает тоже саоме что и indexOf, но справа налево
 
 console.log(arr4.lastIndexOf(1)) // 0
+
+
+/////////////////////////////////////////////////////////////////////////
+
+// В случае, если у нас есть массив объектов, то нам нужно найти определенный объект лишь по каким-либо свойствам или полям
+// для этого мы можем использовать функцию, которая будет проверять, является ли объект тем, что мы ищем
+// функция вызывается по очереди для каждого элемента
+
+const users = [
+    {name: "Petia", age: 5},
+    {name: "Ivan", age: 15},
+    {name: "David", age: 55},
+]
+
+const user1 = users.find((user, index, array) => {
+    // если true - возвращается текущий элемент и перебор прекращается
+    // в случае, если все варианты оказались ложными - возвращает undefined
+    if (user.name === "Petia" && user.age === 5) {
+        return true;
+    }
+    return false;
+})
+
+console.log(user1)
+
+// findIndex - возвращает индекс элемента, иначе -1
+
+const userIndex = users.findIndex(u => u.name === "Petia")
+
+console.log(userIndex) // 0
+
+// findLastIndex - делает тоже самое что и findIndex, но справа налево
+
+const userIndex2 = users.findLastIndex(u => u.name === "David")
+
+console.log(userIndex2) // 2
