@@ -347,3 +347,14 @@ console.log(usersArray2Result)
 const usersArray2Result2 = usersArray2.some(u => u.isAdmin === false)
 
 console.log(usersArray2Result2)
+
+
+///////////////////////////////////////////////////////////////////////////
+
+// fill(value, startIndex, endIndex)
+
+const emptyArray = []
+emptyArray.length = 10;
+emptyArray.fill('empty')
+
+console.log(emptyArray)
