@@ -304,6 +304,46 @@ console.log(someObjectsResult)
 // reduceRight - делает все тоже самое, только справа налево
 
 
-/////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
 
-// 
+// Для того чтобы проверить является ли объект массивом, мы можем воспользоваться Array.isArray()
+
+console.log(typeof {})
+console.log(typeof [])
+console.log(Array.isArray({}))
+console.log(Array.isArray([]))
+
+
+///////////////////////////////////////////////////////////////////////////
+
+// every - выполняет функцию для каждого элемента и проверяет является ли она true, (логическое И)
+// в случае если возвращается false - функция немедленно прекращается и возвращается результат false
+
+const usersArray2 = [
+    {
+        id: 1,
+        name: "Mary",
+        isAdmin: false
+    },
+    {
+        id: 2,
+        name: "John",
+        isAdmin: true
+    },
+    {
+        id: 1,
+        name: "Garry",
+        isAdmin: true
+    },
+]
+
+const usersArray2Result = usersArray2.every(u => u.isAdmin === true)
+
+console.log(usersArray2Result)
+
+// some - делает тоже самое только для него достаточно хотя бы одной верно выполненной функции (логическое или)
+
+
+const usersArray2Result2 = usersArray2.some(u => u.isAdmin === false)
+
+console.log(usersArray2Result2)
