@@ -300,3 +300,10 @@ const someObjectsResult = someObjects.reduce((prev, current) => ({
 }), {result: 0})
 
 console.log(someObjectsResult)
+
+// reduceRight - делает все тоже самое, только справа налево
+
+
+/////////////////////////////////////////////////////////////////////////
+
+// 
