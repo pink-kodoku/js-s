@@ -38,3 +38,19 @@ while (true) {
   if (next.done) break;
   console.log(next.value) // Выведет посимвольно строку "Hello world"
 }
+
+// method Array.from(arg), arg - итерируемый объект (реализован итератор) 
+// или псвевдомассив (есть индексы и свойство length)
+
+console.log(Array.from("Hello world")) // Создаст массив из символов
+
+console.log(Array.from(range)) // [1, 2, 3, 4, 5]
+
+// теперь мы получили целый массив и можем пользоваться его методами
+const arrRange = Array.from(range)
+
+arrRange.push('new element')
+
+console.log(arrRange)
+
+console.log(Array.from({ 1: 1 })) // []
