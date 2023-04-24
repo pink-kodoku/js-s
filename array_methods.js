@@ -251,3 +251,52 @@ console.log(myMessage3.split(''))
 console.log("Hello world hahaha".split(' ').join('; ')) // Hello; world; hahaha
 
 console.log("Hleodkeodkeokdo".split('').join(''))
+
+
+/////////////////////////////////////////////////////////////////////////
+
+// reduce - используется для вычисления единого значения для всего массива
+
+// let value = arr.reduce((accumulator, current, index, array) => )
+
+// accumulator - результат предыдущего выполнения функции, изначально равен initial
+// item - текущий элемент массива
+// index - его позиция
+// array - сам массив
+
+const digitsArray = [1, 2, 3, 4, 5]
+
+const digitsArrayResult = digitsArray.reduce((prev, current) => prev + current, 0)
+
+console.log(digitsArrayResult)
+
+// при отсутсвии initial значения, берется первый элемент массива
+
+const someObjects = [
+    {
+        id: 1,
+        name: "Petia",
+        sum: 300
+    },
+    {
+        id: 2,
+        name: "Ivan",
+        sum: 400
+    },
+    {
+        id: 3,
+        name: "James",
+        sum: 950
+    },
+    {
+        id: 4,
+        name: "Garry",
+        sum: 700
+    },
+]
+
+const someObjectsResult = someObjects.reduce((prev, current) => ({
+    result: current.sum + prev.result
+}), {result: 0})
+
+console.log(someObjectsResult)
