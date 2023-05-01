@@ -1,0 +1,66 @@
+// деструктуризация на примере массива
+
+const users = ["User 1", "User 2", "User 3"];
+
+const [user1, user2, user3] = users;
+
+console.log(user1, user3);
+
+// Деструктурирующее присваивание работает также с перебираемым объектом
+
+const [first, second] = "Hello world";
+
+console.log(first, second);
+
+// Трюк обмена переменных
+
+let a = "Hello";
+let b = "World";
+
+[a, b] = [b, a];
+
+console.log(a);
+console.log(b);
+
+// Используя spread оператор, можем записать в массив оставшиеся элементы от
+// деструктуризации
+
+const [j, s, ...rest] = "Hello";
+console.log(j);
+console.log(s);
+console.log(rest);
+
+// Мы также можем указать значение по умолчанию
+
+const [t, u] = "";
+
+console.log(t, u); // undefined undefined
+
+const [o = "first", p = "second"] = "";
+
+console.log(o, p);
+
+// Деструктуризация также работает и с объектами
+// порядок в котором мы деструктурируем свойства объекта также не имеет значения
+
+const options = {
+  size: 5,
+  width: 300,
+  height: 400,
+  number: 1,
+};
+
+const { size, width } = options;
+
+console.log("size ", size);
+console.log("width ", width);
+
+// Мы также можем совмещать значения по умолчанию и присваивание другой переменной
+
+const options2 = {
+  title: "Menu",
+};
+
+let { width: w = 100, height: h = 100, title } = options2;
+
+console.log(w, h, title) // 100 100 Menu
